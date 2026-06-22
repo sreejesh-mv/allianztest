@@ -1,0 +1,22 @@
+name: first CI pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Print message
+      run: echo "Hello world from github actions"
+
+    - name: show files
+      run: ls -al
